@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    {% if tempra is empty %}
+        Ingen Målinger
+    {% else %}
+        <ul2>
+            <table>
+                <tr>
+                    <th>Dato</th>
+                    <th>Temp</th>
+                </tr>
+                {% for te in tempra %}
+                    <tr>
+                        <td>Dato for Måling:   {{ te.Date }}</td>
+                        <td>Temperatur:   {{ te.Temps }}</td>
+                    </tr>
+
+                {% endfor %}
+            </table>
+        </ul2>
+    {% endif %}
+
+
+</div>
+    {{ result }}
+</body>
+</html>

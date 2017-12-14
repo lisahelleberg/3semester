@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="../controllers/index.php" method="post">
+    <input type="submit" value="start/stop målinger">
+</form>
+<form action="../controllers/historik.php" method="post">
+    <input type="submit" value="Se målinger">
+</form>
+
+
+<h2>
+    {% if state == 1 %}
+        Målingerne kører
+    {% else %}
+        Målingerne kører ikke
+    {% endif %}
+</h2>
+
+<h3>Udvendig temperatur</h3>
+{{ serviceApi }} <!--Dette sætter resultatet af getApi() ind dette sted.-->
+
+<!--<div style="background-color:#e5e5e5;padding:15px;text-align:center;">
+  //  <button class="button">Start målinger</button>
+
+  //  <div style="background-color:#e5e5e5;padding:15px;text-align:center;">
+        <button onclick="window.close();return false;" class="button">Luk program</button>
+//  </div>
+/</div> -->
+
+</body>
+</html>
